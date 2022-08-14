@@ -8,14 +8,9 @@ public class PedalButton : MonoBehaviour
 {
     static public void OnClick()
     {
-        score++;
+        Score.AddScore();
         Debug.Log("1");
     }
 
-    static public int GetScore()
-    {
-        return score; 
-    }
-    
-    static private int score;
+
 }
