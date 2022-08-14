@@ -8,7 +8,7 @@ public class PedalButton : MonoBehaviour
 {
     static public void OnClick()
     {
-        Score.AddScore();
+        Score.AddScore(500);
         Debug.Log("1");
     }
 

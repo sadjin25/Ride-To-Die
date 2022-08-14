@@ -8,7 +8,8 @@ public class Score : MonoBehaviour
 {
     public void Update()
     {
-        scoreText.text = score.ToString(); 
+        scoreText.text = score.ToString();
+        AddScore(scorePerFrame);
     }
 
     static public int GetScore()
@@ -16,11 +17,12 @@ public class Score : MonoBehaviour
         return score;
     }
 
-    static public void AddScore()
+    static public void AddScore(int score_)
     {
-        score++;
+        score += score_;
     }
 
-    [SerializeField]TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI scoreText;
     static private int score;
+    static private int scorePerFrame = 1;
 }
