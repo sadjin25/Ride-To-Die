@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    public Score scoreManager;
-    public PedalButton buttonManager;
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
 }
