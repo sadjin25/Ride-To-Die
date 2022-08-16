@@ -6,7 +6,7 @@ public class CameraResolution : MonoBehaviour
 {
     void Start()
     {
-        Camera camera = GetComponent<Camera>();
+/*        Camera camera = GetComponent<Camera>();
         Rect rect = camera.rect;
         float scaleHeight = ((float)Screen.width / Screen.height) / ((float)9 / 16);
         float scaleWidth = 1f / scaleHeight;
@@ -23,8 +23,8 @@ public class CameraResolution : MonoBehaviour
             rect.x = (1f - scaleWidth) / 2f;
         }
 
-        camera.rect = rect;
+        camera.rect = rect;*/
     }
 
-    private void OnPreCull() => GL.Clear(true, true, Color.black);
-}
+/*    private void OnPreCull() => GL.Clear(true, true, Color.black);
+*/}
