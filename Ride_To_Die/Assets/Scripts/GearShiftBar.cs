@@ -14,7 +14,10 @@ public class GearShiftBar : MonoBehaviour
     void Update()
     {
         UpdateShift();
-        BarFiller();    
+        BarFiller();
+        ColorChanger();
+
+        lerpSpeed = 6f * Time.deltaTime;
     }
 
     void UpdateShift()
@@ -24,10 +27,20 @@ public class GearShiftBar : MonoBehaviour
 
     void BarFiller()
     {
-        Bar.fillAmount = (float)currentGearShift / maxGearShift;
+        Bar.fillAmount = Mathf.Lerp(Bar.fillAmount, (float)currentGearShift / maxGearShift, lerpSpeed);
+    }
+
+    void ColorChanger()
+    {
+        Color BarColor = Color.Lerp(Color.blue, Color.red, (float)currentGearShift / maxGearShift);
+
+        Bar.color = BarColor;
     }
 
     public Image Bar;
+
+    private float lerpSpeed;
+
     private float maxGearShift;
     private float currentGearShift;
 }
