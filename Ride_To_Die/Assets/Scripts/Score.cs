@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
     static public void AddSpeed(int score_)
     {
         gearShift += score_;
-        if(gearShift > maxGearShift) gearShift = 5;    
+        if(gearShift > maxGearShift) gearShift = maxGearShift;    
     }
 
     static public void AddScore(int score_)
