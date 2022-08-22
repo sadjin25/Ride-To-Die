@@ -17,6 +17,14 @@ public class Score : MonoBehaviour
     {
         return score;
     }
+    static public int GetMaxShift()
+    {
+        return maxGearShift;
+    }
+    static public int GetShift()
+    {
+        return gearShift;
+    }
 
     static public void AddSpeed(int score_)
     {
